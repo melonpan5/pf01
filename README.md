@@ -19,12 +19,6 @@
 会場候補が決まっており、どんな結婚式をいくらであげられるか知りたい時、本サービスでシュミレーションする
 
 ## 設計書（追って作成）
-・UIフロー図
-・機能要件一覧
-・ER図
-・テーブル定義書
-・WF（こちらのみ手書きの予定）
-・詳細設計（コントローラ・アクションの一覧）
 
 ### 機能一覧
 https://docs.google.com/spreadsheets/d/1U0D6TvMxTP2fDmHTvlP-w_99hjXNZXTI36wjXFm2Tro/edit?usp=sharing
