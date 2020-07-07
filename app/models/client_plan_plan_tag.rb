@@ -1,0 +1,2 @@
+class ClientPlanPlanTag < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+class PrePlan < ApplicationRecord
+end

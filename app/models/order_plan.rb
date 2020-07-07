@@ -1,0 +1,2 @@
+class OrderPlan < ApplicationRecord
+end
