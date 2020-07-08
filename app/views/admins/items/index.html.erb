@@ -1,2 +1,38 @@
-<h1>Admins::Items#index</h1>
-<p>Find me in app/views/admins/items/index.html.erb</p>
+<div class="container">
+<div class="row">
+    <div class="col-xs-12">
+        <div class="title">
+            <h2>商品一覧</h2>
+        </div>
+    </div>
+</div>
+
+ <%# 共通ボディー開始タグここまで%>
+<%# クライアント一覧 %>
+<table class="table table-sm table-responsive table-bordered">
+				<thead>
+					<tr>
+						<th class="table-success" style="width:25%">商品ID</th>
+						<th class="table-success" style="width:25%">プラン名</th>
+						<th class="table-success" style="width:25%">商品名</th>
+                        <th class="table-success" style="width:25%">単価</th>
+                    </tr>
+				</thead>
+				<tbody>
+					<% @items.each do |item| %>
+					<tr class="active">
+						<td　style="width:75%"><%= item.id %></td>
+						<td　style="width:75%"><%= item.client.name %></td>
+						<td　style="width:75%"><%= link_to item.name, admins_item_path(item) %></td>
+                        <td　style="width:75%"><%= item.unit_price.to_s(:delimited) %></td>
+					</tr>
+					<% end %>
+					<%= paginate @items %>
+				</tbody>
+			</table>
+
+<%# クライアント一覧ここまで %>
+
+<%# 登録フォーム %>
+<%# 共通ボディー閉じタグ %>
+</div>
