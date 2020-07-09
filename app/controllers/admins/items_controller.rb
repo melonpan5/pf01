@@ -6,8 +6,9 @@ class Admins::ItemsController < ApplicationController
 
   def create
     @item = Item.new(item_params)
+    @item.client_id = params[:item][:client_id].to_i
+    byebug
     if @item.save
-      byebug
       redirect_to admins_item_path(@item), notice: "商品を新規追加しました"
     else
       render "new"
@@ -25,7 +26,7 @@ class Admins::ItemsController < ApplicationController
   def edit
     @item = Item.find(params[:id])
   end
-end
+
 
 def update
   @item = Item.find(params[:id])
@@ -36,7 +37,14 @@ def update
   end
 end
 
+def destroy
+  @item = Item.find(params[:id])
+  @item.destroy
+    redirect_to admins_items_path
+    flash[:notice] = 'successfully　商品を削除しました'
+end
 
+end
 private
   def item_params
     params.require(:item).permit(
@@ -44,6 +52,6 @@ private
       :name,
       :description,
       :unit_price,
-      :item_image_id,
+      :item_image,
     )
   end
