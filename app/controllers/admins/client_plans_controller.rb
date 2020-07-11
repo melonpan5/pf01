@@ -82,5 +82,6 @@ private
       :dress_item_id,
       :memory_item_id,
       :base_pack_item_id,
-      :total_price)
+      :total_price,
+      plan_tag_ids: [])
   end

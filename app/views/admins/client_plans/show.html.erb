@@ -7,7 +7,9 @@
 
 
 <div class="sub-title"><h4>プラン概要</h4></div>
-
+<% @client_plan.plan_tags.each do |tag| %>
+    <span class= 'badge badge-primary'><%= tag.name %></span>
+<% end %>
 <table class="table table-sm table-bordered">
     <tr>
         <th class="table-success" style="width:25%">プラン名</th>
